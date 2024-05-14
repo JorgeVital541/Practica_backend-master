@@ -1,0 +1,14 @@
+api:
+  identifier: "personal"
+  port: 0541
+
+logger:
+  options:
+    level: trace
+
+mongodb:
+  url: "mongodb://localhost:27017"
+  database: "base 1"
+  options:
+    useUnifielTopology: true
+    useNewUrlParser: true

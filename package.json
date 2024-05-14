@@ -4,18 +4,25 @@
   "description": "registro",
   "main": "index.js",
   "scripts": {
+    "dev:server": "nodemon --watch src//*",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc",
-    "dev": "nodemon"
+    "serve": "nodemon dist/src",
+    "dev": "nodemon dist/src",
+    "build": "rm -rvf ./build && tsc --build",
+    "start": "npm run build && node build/src/index.js | npx pino-pretty -t SYS:yyyy-mm-dd,HH:MM:ss"
   },
   "author": "jvital",
   "license": "ISC",
   "dependencies": {
+    "@types/express-fileupload": "^1.5.0",
     "config": "^3.3.11",
+    "convert-csv-to-json": "^2.46.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
+    "generic-pool": "^3.9.0",
     "js-yaml": "^4.1.0",
-    "mongoose": "^8.3.0",
+    "mongoose": "^8.3.2",
     "pino": "^8.20.0",
     "pino-pretty": "^11.0.0"
   },

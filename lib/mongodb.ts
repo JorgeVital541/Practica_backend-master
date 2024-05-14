@@ -1,10 +1,10 @@
-import config from "config"
-import mongoose from "mongoose"
+import config from "config" 
+import mongoose from "mongoose" 
 import logger from "./logger";
 
 export default class MongoConn{
-    public async connectDB(){
-        mongoose.set('strictQuery', false);
+    public async connectDB(){ 
+        mongoose.set('strictQuery', false); 
         mongoose.set('bufferCommands', true);
         try {
             await mongoose.connect(`${config.get('mongodb.url')}/${config.get('mongodb.database')}`);
@@ -23,3 +23,4 @@ export default class MongoConn{
         }
     }
 }
+

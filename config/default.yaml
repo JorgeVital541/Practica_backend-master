@@ -1,6 +1,6 @@
 api:
-  identifier: "personal"
-  port: 0541
+  identifier: "IdTuna"
+  port: 9541
 
 logger:
   options:
@@ -8,7 +8,7 @@ logger:
 
 mongodb:
   url: "mongodb://localhost:27017"
-  database: "base 1"
+  database: "Tuna"
   options:
     useUnifielTopology: true
     useNewUrlParser: true
